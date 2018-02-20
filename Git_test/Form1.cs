@@ -15,6 +15,8 @@ namespace Git_test
         public Form1()
         {
             InitializeComponent();
+            
+            int a = 12;
         }
     }
 }

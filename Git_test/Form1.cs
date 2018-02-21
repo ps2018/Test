@@ -16,7 +16,7 @@ namespace Git_test
         {
             InitializeComponent();
             
-            int a = 5000;
+            int a = 6000;
         }
     }
 }

@@ -21,7 +21,9 @@ namespace Git_test
 
             int a = 6000;
         }
-        private void button4_Click(object sender, EventArgs e)
+private double resul (string text1, string text2){
+}
+private void button4_Click(object sender, EventArgs e)
         {
             if (textBox1.Text != "") res1 = Double.Parse(textBox1.Text);
             if (textBox2.Text != "") res2 = Double.Parse(textBox2.Text);

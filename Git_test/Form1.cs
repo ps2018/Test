@@ -14,52 +14,58 @@ namespace Git_test
     {
         public double res1 = 0;
         public double res2 = 0;
-        public double result = 0;
+        public double result;
+        public bool b2, b3, b4, b5;
         public Form1()
         {
             InitializeComponent();
 
             int a = 6000;
         }
-private double resul (string text1, string text2){
-}
-private void button4_Click(object sender, EventArgs e)
+        private double resul(string text1, string text2)
         {
-            if (textBox1.Text != "") res1 = Double.Parse(textBox1.Text);
-            if (textBox2.Text != "") res2 = Double.Parse(textBox2.Text);
-            result = res1 + res2;
+            res1 = Double.Parse(text1);
+            res2 = Double.Parse(text2);
+            if (b2) { result = res1 / res2; b2 = false; }
+            else
+            if (b3) { result = res1 * res2; b3 = false; }
+            else
+            if (b4) { result = res1 + res2; b4 = false; }
+            else
+            if (b5) { result = res1 - res2; b5 = false; }
             textBox2.Clear();
             textBox1.Clear();
+            return result;
+        }
+        private void button4_Click(object sender, EventArgs e)
+        {
+            b4 = true;
+            if (textBox1.Text != "" && textBox2.Text != "") resul(textBox1.Text, textBox2.Text);
+            else MessageBox.Show("Введите значения");
             textBox3.Text = result.ToString();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-           if (textBox1.Text!="") res1 = Double.Parse(textBox1.Text);
-           if (textBox2.Text != "") res2 = Double.Parse(textBox2.Text);
-            result = res1 * res2;
-            textBox2.Clear();
-            textBox1.Clear();
+            b3 = true;
+            if (textBox1.Text != "" && textBox2.Text != "") resul(textBox1.Text, textBox2.Text);
+            else MessageBox.Show("Введите значения");
             textBox3.Text = result.ToString();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text != "") res1 = Double.Parse(textBox1.Text);
-            if (textBox2.Text != "") res2 = Double.Parse(textBox2.Text);
-            result = res1 - res2;
-            textBox2.Clear();
-            textBox1.Clear();
+            b5 = true;
+            if (textBox1.Text != "" && textBox2.Text != "") resul(textBox1.Text, textBox2.Text);
+            else MessageBox.Show("Введите значения");
             textBox3.Text = result.ToString();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text != "") res1 = Double.Parse(textBox1.Text);
-            if (textBox2.Text != "") res2 = Double.Parse(textBox2.Text);
-            result = res1 / res2;
-            textBox2.Clear();
-            textBox1.Clear();
+           b2 = true;
+            if (textBox1.Text != "" && textBox2.Text != "") resul(textBox1.Text, textBox2.Text);
+            else MessageBox.Show("Введите значения");
             textBox3.Text = result.ToString();
         }
 
@@ -70,7 +76,7 @@ private void button4_Click(object sender, EventArgs e)
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-           
+
         }
 
         private void textBox1_VisibleChanged(object sender, EventArgs e)

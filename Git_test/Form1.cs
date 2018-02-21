@@ -69,20 +69,6 @@ namespace Git_test
             textBox3.Text = result.ToString();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_VisibleChanged(object sender, EventArgs e)
-        {
-        }
-
         private void textBox1_MouseDown(object sender, MouseEventArgs e)
         {
             if (textBox3.Text != "") textBox1.Text = textBox3.Text;

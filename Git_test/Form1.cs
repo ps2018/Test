@@ -20,7 +20,7 @@ namespace Git_test
         {
             InitializeComponent();
 
-            int a = 12000;
+            int a = 1;
         }
         private double resul(string text1, string text2)
         {

@@ -13,7 +13,7 @@ namespace Git_test
     public partial class Form1 : Form
     {
         public double res1 = 0;
-        public double res2 = 0;
+        public double res2 = 5;
         public double result;
         public bool b2, b3, b4, b5;
         public Form1()

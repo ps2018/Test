@@ -22,7 +22,8 @@ namespace Git_test
 
             int a = 10;
             int b = 20;
-            int c = 0;        }
+            int c = 0;
+        }
         private double resul(string text1, string text2)
         {
             res1 = Double.Parse(text1);
